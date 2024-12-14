@@ -2,19 +2,12 @@ import { motion } from "framer-motion";
 import TaskTable from "./TaskTable";
 
 const Home = () => {
-  const pageVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: 50 },
-  };
-
   return (
     <motion.div
-      className="bg-slate-300 rounded-xl"
+      className="bg-slate-300 rounded-xl max-w-full overflow-x-auto"
       initial="hidden"
-      animate="visible"
       exit="exit"
-      variants={pageVariants}
+      animate={{ x: [-100, -50, 0, 10, 0] }}
       transition={{ duration: 0.8 }}
     >
       <TaskTable />
