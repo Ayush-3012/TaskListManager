@@ -23,12 +23,14 @@ const TaskTable = () => {
     const fetchData = async () => {
       try {
         const res = await axios.get(`${import.meta.env.VITE_API_URI}`);
-        const mappedTasks = res?.data?.slice(0, 20)?.map((task) => ({
-          id: task.id,
-          title: task.title,
-          description: `Description for task ${task.id}`,
-          status: task.completed ? "Done" : "To Do",
-        }));
+        const mappedTasks = Array.isArray(res?.data)
+          ? res?.data?.slice(0, 20)?.map((task) => ({
+              id: task.id,
+              title: task.title,
+              description: `Description for task ${task.id}`,
+              status: task.completed ? "Done" : "To Do",
+            }))
+          : [];
         setTasks(mappedTasks);
         enqueueSnackbar("Fetched Tasks", { variant: "success" });
       } catch (error) {
