@@ -104,7 +104,7 @@ const TaskTable = () => {
   const handleCellEdited = (cell) => {
     const updatedTask = cell.getData();
     setTasks((prevTasks) =>
-      prevTasks.map((task) =>
+      prevTasks?.map((task) =>
         task.id === updatedTask.id
           ? { ...task, status: updatedTask.status }
           : task
