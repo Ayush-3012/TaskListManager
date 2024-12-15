@@ -4,7 +4,7 @@ import TaskTable from "./TaskTable";
 const Home = () => {
   return (
     <motion.div
-      className="bg-slate-300 rounded-xl max-w-full overflow-x-auto"
+      className="rounded-xl max-w-full overflow-x-auto"
       initial="hidden"
       exit="exit"
       animate={{ x: [-100, -50, 0, 10, 0] }}

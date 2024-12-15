@@ -9,7 +9,7 @@ const Header = () => {
   });
   return (
     <motion.div
-      className="text-xl bg-slate-800 self-stretch mx-10 font-mono font-bold text-slate-100 py-4 rounded-md text-center"
+      className="text-xl font-serif bg-slate-800 self-stretch mx-10 font-bold text-slate-100 py-4 rounded-md text-center"
       animate={{
         x: [100, 50, 0, -10, 0],
       }}

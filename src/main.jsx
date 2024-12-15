@@ -6,10 +6,10 @@ import App from "./App.jsx";
 createRoot(document.getElementById("root")).render(
   <SnackbarProvider
     maxSnack={2}
-    autoHideDuration={1000}
+    autoHideDuration={1500}
     anchorOrigin={{
       vertical: "bottom",
-      horizontal: "center",
+      horizontal: "right",
     }}
   >
     <App />

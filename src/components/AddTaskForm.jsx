@@ -20,7 +20,7 @@ const AddTaskForm = ({ onClose, onAddTask }) => {
     >
       <div className="bg-slate-600 p-6 rounded shadow-md w-2/4 max-md:w-3/4 max-sm:w-5/6 max-sm:p-3">
         <h2 className="text-xl font-bold text-slate-50 mb-4">Add New Task</h2>
-
+        {/* Form Input for new task */}
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-gray-50 font-medium mb-2">Title</label>

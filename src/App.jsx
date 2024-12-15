@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const App = () => {
   return (
     <motion.div
-      className="flex flex-col gap-8 py-4 items-center bg-emerald-400"
+      className="flex flex-col gap-2 bg-fuchsia-100 py-2 items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
